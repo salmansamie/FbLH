@@ -1,4 +1,5 @@
 from app_logic.point import Point
+from app_struct.struct_buffer import calc_avg
 from random import randrange
 import urllib.request
 import simplejson
@@ -37,9 +38,13 @@ def get_dest(origin: Point, minAngle: float, maxAngle: float, dist):
     return [dest, brng]
 
 
+wei1 = 0.0
+wei2 = 0.0
+
+
 # returns a JSON of the waypoints
 def get_route(latitude, longitude, dist):
-    origin = Point()
+    origin = Point()                              # 1
     origin.longitude = longitude
     origin.latitude = latitude
 
@@ -47,8 +52,11 @@ def get_route(latitude, longitude, dist):
 
     tmp = get_dest(origin, 0, 360, dist / 2)
     waypoint1 = tmp[0]
+    wei1 = waypoint1
+
     tmp = get_dest(origin, tmp[1] - 35, tmp[1] + 35, dist / 2)
     waypoint2 = tmp[0]
+    wei2 = waypoint2
 
     # construct a url for an API request
     url = str.format(
@@ -64,4 +72,9 @@ def get_route(latitude, longitude, dist):
     requests = urllib.request.urlopen(req).read()
 
     req = simplejson.dumps(requests.get(url).json(), cls=simplejson.encoder.JSONEncoderForHTML)
-    return req
+    return req, wei1, wei2
+
+
+dist = calc_avg(30)
+
+print(get_route(wei1, wei2, dist))

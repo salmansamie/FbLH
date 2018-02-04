@@ -3,7 +3,6 @@
 import configparser
 import ast
 import os
-import numpy as np
 
 _author_ = 'salmansamie'
 
@@ -19,9 +18,9 @@ class CNFparser:
 
 
 # 'tme' will take minutes as input once from the user
-def ring_dist_function(tme, spd=0.16):
+def ring_dist_function(tme, spd=10/60):
     speed_lst = CNFparser.run_timer()
-    dist = float(spd*tme)
+    dist = int(spd*tme*60)
     speed_lst.pop(0)
     speed_lst.append(dist)
 
@@ -34,10 +33,11 @@ def ring_dist_function(tme, spd=0.16):
     return speed_lst
 
 
-def calc_avg(minutes):
-    arr = np.asarray(ring_dist_function(minutes))
-    return np.average(arr)
+def calc_avg(hours):
+    arr = [x for x in ring_dist_function(hours)]
+    len_arr = len(arr)
+    store = 0
+    for x in arr:
+        store = store + x
+    return store/len_arr
 
-
-if __name__ == '__main__':
-    print(calc_avg(5))      # calc_avg(pass_minutes_here)
