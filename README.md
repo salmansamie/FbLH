@@ -1,6 +1,8 @@
 # FbLH
-> Given a run-time in minutes, calculate a random route using a users previous run speeds and avoiding high-crime 
-areas. 
+
+Given a run-time in minutes, this application calculatse a random route using a users previous run speeds 
+by avoiding high-crime areas based on latest reports. 
+
 
 ## Homepage
 <p align="center"><img src="https://github.com/salmansamie/FbLH/blob/master/docs/img/homepage.png" alt="Homepage" width="430" height="360" align="middle"></p>
