@@ -3,13 +3,13 @@
 areas. 
 
 ## Homepage
-<img src="https://github.com/salmansamie/FbLH/blob/master/docs/img/homepage.png" alt="Homepage" width="430" height="360" align="middle">
+<p align="center"><img src="https://github.com/salmansamie/FbLH/blob/master/docs/img/homepage.png" alt="Homepage" width="430" height="360" align="middle"></p>
 
 ## App
-<img src="https://github.com/salmansamie/FbLH/blob/master/docs/img/application.png" alt="Homepage" width="430" height="360" align="middle">
+<p align="center"><img src="https://github.com/salmansamie/FbLH/blob/master/docs/img/application.png" alt="Homepage" width="430" height="360" align="middle"></p>
 
 ## Randomized path
-<img src="https://github.com/salmansamie/FbLH/blob/master/docs/img/randomized_route.png" alt="Homepage" width="430" height="360" align="middle">
+<p align="center"><img src="https://github.com/salmansamie/FbLH/blob/master/docs/img/randomized_route.png" alt="Homepage" width="430" height="360" align="middle"></p>
 
 
 Created as a part of 2018 Facebook hackathon(03-02-2018).
