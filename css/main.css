@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+/* Coolors Exported Palette - coolors.co/05668d-427aa1-ebf2fa-55d6be-acfcd9 */
+/* HSL */
+/* RGB */
+.c_btn {
+  padding: 5px 0.5rem;
+  background-color: #05668d;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer; }
+  .c_btn span {
+    transition: opacity 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .c_btn:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  .c_btn:focus {
+    outline: 0; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  height: 100%;
+  overflow: hidden; }
+
+#banner button {
+  padding-right: 1rem; }
+  #banner button i {
+    padding: 0.5rem; }
+
+#banner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  transition: all 0.3s; }
+  #banner .logo {
+    max-height: 300px;
+    height: 300px;
+    width: auto;
+    position: relative;
+    margin-bottom: 2rem; }
+    #banner .logo img {
+      width: auto;
+      height: 100%; }
+
+.removeBanner {
+  opacity: 0;
+  z-index: 9; }
+
+.main_c {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.show_main_c {
+  opacity: 1;
+  z-index: 99; }
+
+.map_container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+  .map_container #map {
+    width: 100%;
+    height: 100%; }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background: #BDBDBD; }
+
+::-webkit-scrollbar-track {
+  background: #F5F5F5; }
+
+.input-fields {
+  width: 70vw;
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 1.5rem;
+  z-index: 199;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  .input-fields .input-group-prepend, .input-fields .input-group-append {
+    cursor: pointer; }
+    .input-fields .input-group-prepend .input-group-text, .input-fields .input-group-append .input-group-text {
+      background-color: #ecf0f1;
+      border-radius: 0;
+      font-weight: 600;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .input-fields .input-group-prepend .input-group-text:hover, .input-fields .input-group-append .input-group-text:hover {
+        background-color: #bdc3c7; }
+    .input-fields .input-group-prepend i, .input-fields .input-group-append i {
+      margin-right: 5px; }
+  .input-fields #find-my-location, .input-fields #generate-my-route {
+    margin: 0 auto;
+    display: block;
+    color: #ffffff; }
+    .input-fields #find-my-location.disabled, .input-fields #generate-my-route.disabled {
+      opacity: 0.75; }
+  .input-fields input {
+    border: 1px solid #7f8c8d; }
+    .input-fields input:hover {
+      border: 1px solid #2c3e50; }
+
+@media only screen and (max-width: 600px) {
+  .input-fields {
+    width: 100vw;
+    bottom: 0;
+    border-radius: 0;
+    box-shadow: none; } }
+
+label {
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem; }
+
+.show-input-fields {
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 3px 3px 0 0;
+  position: fixed;
+  bottom: 0;
+  display: none;
+  font-weight: 600;
+  font-size: 28px;
+  z-index: 999;
+  line-height: 5px;
+  cursor: pointer; }
+
+#open-in-google-maps {
+  display: none;
+  position: fixed;
+  bottom: 35px;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.32); }
+
+#previous-runs {
+  width: 500px;
+  max-width: 100%;
+  margin-bottom: 15px;
+  padding: 0 8px; }
+  #previous-runs table {
+    margin-bottom: 5px; }
+  #previous-runs h2 {
+    text-align: left;
+    font-weight: 600; }

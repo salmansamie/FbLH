@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>RandRun</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="banner">
+      <!-- <div class="logo">
+        <img src="./images/logo.png" />
+      </div> -->
+      <div id="previous-runs">
+        <h2>Your Previous Runs</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Distance</th>
+              <th scope="col">Time</th>
+              <th scope="col">Speed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>5.42k</td>
+              <td>32 mins</td>
+              <td>10.16km/h</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>7.24k</td>
+              <td>50 mins</td>
+              <td>8.69km/h</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>3.98k</td>
+              <td>24 mins</td>
+              <td>9.95km/h</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <strong>Average Speed:</strong> 9.60km/h
+        </p>
+      </div>
+
+      <button class="c_btn" onclick="initApp()">
+        <span><i class="fa fa-location-arrow"></i>Find My Location</span>
+      </button>
+    </div>
+    <div class="main_c">
+      <a href="javascript:void(0);" class="btn btn-info" id="open-in-google-maps">
+        Route in Google Maps <i class="fa fa-compass"></i>
+      </a>
+      <div class="show-input-fields">
+        <i class="fa fa-angle-up"></i>
+      </div>
+      <form class="input-fields">
+        <div class="row">
+          <div class="col-md-12">
+            <label>
+              How long do you want to run for?
+            </label>
+            <div class="input-group mb-3">
+              <input type="tel" class="form-control" placeholder="Time in minutes..." id="run-duration">
+              <div class="input-group-append">
+                <span class="input-group-text modify" data-amount="-15">
+                  <i class="fa fa-minus"></i> 15
+                </span>
+                <span class="input-group-text modify" data-amount="-1">
+                  <i class="fa fa-minus"></i> 1
+                </span>
+                <span class="input-group-text modify" data-amount="1">
+                  <i class="fa fa-plus"></i> 1
+                </span>
+                <span class="input-group-text modify" data-amount="15">
+                  <i class="fa fa-plus"></i> 15
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <a
+              class="btn c_btn"
+              id="generate-my-route"
+            >
+              Generate Random Route
+            </a>
+          </div>
+        </div>
+      </form>
+      <div class="map_container">
+        <div id="map"></div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/init.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWxxHYi2m3O4A74buAMfvNUEy1a_v8_gs&libraries=visualization">
+    </script>
+  </body>
+</html>
